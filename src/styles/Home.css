@@ -1,0 +1,6 @@
+.home {
+    background : linear-gradient(to bottom right, rgba(23, 50, 167, 0.8), rgba(151, 96, 14, 0.801));
+    background-size: 100% auto;
+    height: 92vh;
+    margin-top: 79px;
+}
