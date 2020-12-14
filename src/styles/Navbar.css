@@ -1,21 +1,104 @@
 .navbar {
-    background: black;
-    padding: 20px 0;
+    background-color: rgba(8,4,74,1);
+    height: 80px;
     display: flex;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar .navbar_logo {
-    flex-grow: 0.8;
+.navbar_logo {
+    justify-self: start;
+    margin-left: 30px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.7em;
 }
 
-.navbar a {
-    margin: 10px;
+.navbar_menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 25px;
+    list-style-type: none;
+    justify-content: end;
+    width: 80%;
+    text-align: center;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+
+.navbar_link {
     text-decoration: none;
     color: white;
-    padding-right: 29px;
+    padding: 1rem 1rem;
 }
 
+.navbar_link:hover {
+    background-color: rgb(15, 10, 102);
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.menu_icon {
+    display: none;
+}
+
+@media screen and (max-width: 860px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar_menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 308px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.7s ease;
+    }
+
+    .navbar_menu.active {
+        background-color: rgb(13, 9, 102);
+        left: 0;
+        opacity: 1;
+        transition: all 0.7s ease;
+        z-index: 1;
+    }
+
+    .navbar_link {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar_link:hover {
+        background-color: rgb(37, 30, 170);
+        border-radius: 0;
+    }
+
+    .navbar_logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(50%, 78%);
+        font-size: 1.7em;
+    }
+
+    .menu_icon {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-300%, 60%);
+        cursor: pointer;
+    }
+}
+
+/*
+background: rgb(8,4,74);
+    background: linear-gradient(90deg, rgba(8,4,74,1) 7%, rgba(20,8,125,1) 36%, rgba(42,65,186,1) 66%, rgba(167,195,255,1) 100%);
+*/
