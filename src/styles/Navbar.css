@@ -1,9 +1,9 @@
 .navbar {
-    background-color: rgba(8,4,74,1);
-    height: 80px;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    position:relative;
 }
 
 .navbar_logo {
@@ -11,6 +11,11 @@
     margin-left: 30px;
     cursor: pointer;
     color: white;
+    font-size: 1.7em;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    transform: translate(50%, 78%);
     font-size: 1.7em;
 }
 
@@ -24,18 +29,33 @@
     text-align: center;
     margin-right: 2rem;
     font-size: 1.2rem;
+    width: 100%;
+    height: 308px;
+    position: absolute;
+    top: 100%;
+    left: -10%;
+    opacity: 1;
 }
 
 .navbar_link {
     text-decoration: none;
     color: white;
     padding: 1rem 1rem;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
 }
 
 .navbar_link:hover {
+    -webkit-backdrop-filter: blur( 5.0px );
     background-color: rgb(15, 10, 102);
     border-radius: 10px;
     transition: all 0.4s ease;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+    backdrop-filter: blur( 5.0px );
+    border-radius: 10px;
 }
 
 .menu_icon {
@@ -60,7 +80,11 @@
     }
 
     .navbar_menu.active {
-        background-color: rgb(13, 9, 102);
+        -webkit-backdrop-filter: blur( 5.0px );
+        background: rgba( 255, 255, 255, 0.05 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+        backdrop-filter: blur( 5.0px );
+        border-radius: 10px;
         left: 0;
         opacity: 1;
         transition: all 0.7s ease;
@@ -75,14 +99,18 @@
     }
 
     .navbar_link:hover {
+        -webkit-backdrop-filter: blur( 5.0px );
         background-color: rgb(37, 30, 170);
         border-radius: 0;
+        background: rgba( 255, 255, 255, 0.1 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.2 );
+        backdrop-filter: blur( 5.0px );
     }
 
     .navbar_logo {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 10%;
         transform: translate(50%, 78%);
         font-size: 1.7em;
     }
