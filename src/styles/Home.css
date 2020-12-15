@@ -3,3 +3,76 @@
     background-size: cover;
     height: 100vh;
 }
+
+.home_intro {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;  
+    align-items: center;
+}
+
+.intro_greet {
+    color: white;
+    font-size: 5vw;
+    transform: translate(0,-250%);
+}
+
+.work-1, .work-2, .work-3, .work-4 {
+    position: absolute;
+    display: block;
+    top: 50%;
+    color: white;
+    width: 60%;
+    font-size: 3vw;
+
+    animation-duration: 12s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.work-1 {
+    animation-name: anim-1;
+}
+
+.work-2 {
+    animation-name: anim-2;
+}
+
+.work-3 {
+    animation-name: anim-3;
+}
+
+.work-4 {
+    animation-name: anim-4;
+}
+
+@keyframes anim-1 {
+	0%, 6.25% { left: 32%; opacity: 0; }
+    6.25%,18.75% { left: 36%; opacity: 1; }
+    25%, 100% { left: 40%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 25% { left: 28%; opacity: 0; }
+    31.25%, 43.75% { left: 32%; opacity: 1; }
+    50%, 100% { left: 36%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 50% { left: 28%; opacity: 0; }
+    56.25%, 68.75% { left: 32%; opacity: 1; }
+    75%, 100% { left: 36%; opacity: 0; }
+}
+
+@keyframes anim-4 {
+	0%, 75% { left: 28.5%; opacity: 0; }
+    81.25%, 93.75% { left: 32.5%; opacity: 1; }
+    100% { left: 36.5%; opacity: 0; }
+}
+
+@media screen and (max-width: 860px) {
+    .intro_greet {
+        font-size: 8vw;
+    }
+}
