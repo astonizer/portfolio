@@ -1,3 +1,5 @@
 # Portfolio Website
 
-Built using React
+[Live Website](http://astel.surge.sh/)
+
+Built using HTML, CSS, JS, React
