@@ -10,7 +10,7 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="navbar_logo">LOGO</div>
+            <div className="navbar_logo">ASTEL</div>
             <div className="menu_icon" onClick={handleClick}>
                 {!click? <MenuIcon fontSize="large" /> : <CloseIcon fontSize="large" />}
             </div>
